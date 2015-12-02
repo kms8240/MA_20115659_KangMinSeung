@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:text="Back"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="73dp"
+        android:onClick="onBackButtonClicked" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:text="Save"
+        android:id="@+id/save_button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp"
+        android:onClick="onWineSaveButtonClicked"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:text="List"
+        android:id="@+id/list_button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

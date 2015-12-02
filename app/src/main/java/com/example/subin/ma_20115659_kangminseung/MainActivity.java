@@ -26,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
     }
 
+
+    public void onButton3Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), wine_cellar.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
