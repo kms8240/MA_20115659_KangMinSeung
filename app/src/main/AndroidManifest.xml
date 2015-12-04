@@ -17,10 +17,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="red_wine"></activity>
+        <activity android:name=".select_wine"></activity>
         <activity android:name="wine_cellar"></activity>
         <activity android:name="wine_save"></activity>
         <activity android:name="wine_list"></activity>
+        <activity android:name="select_wine_list"></activity>
     </application>
 
 </manifest>

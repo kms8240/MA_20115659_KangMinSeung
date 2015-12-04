@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="wine_dry">
+        <item>Dry Wine</item>
+        <item>Medium Dry Wine</item>
+        <item>Sweet Wine</item>
+    </string-array>
+
+    <string-array name="wine_light">
+        <item>Light</item>
+        <item>Medium</item>
+        <item>Full</item>
+    </string-array>
+
+
+</resources>

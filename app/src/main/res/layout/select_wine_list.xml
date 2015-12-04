@@ -2,13 +2,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <Button
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:id="@+id/button3"
-        android:layout_alignParentBottom="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="73dp"
-        android:onClick="onBackButtonClicked" />
+        android:layout_marginTop="73dp" />
 </RelativeLayout>

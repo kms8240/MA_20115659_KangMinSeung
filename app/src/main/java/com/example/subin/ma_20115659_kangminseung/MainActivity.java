@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    int wine;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButton1Clicked(View v){
-        Intent intent = new Intent(getApplicationContext(), red_wine.class);
+        wine = 0;
+        Intent intent = new Intent(getApplicationContext(), select_wine.class);
+        intent.putExtra("wine",wine);
         startActivity(intent);
         Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_LONG).show();
     }
