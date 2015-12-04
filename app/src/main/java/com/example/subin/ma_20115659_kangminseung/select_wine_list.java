@@ -1,9 +1,9 @@
 package com.example.subin.ma_20115659_kangminseung;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.TextView;
 
 public class select_wine_list extends AppCompatActivity {
@@ -22,13 +22,11 @@ public class select_wine_list extends AppCompatActivity {
         dry = intent.getExtras().getInt("dry");
         light = intent.getExtras().getInt("light");
         wine = intent.getExtras().getInt("wine");
-        //getIntent().getIntExtra("dry", dry);
 
-        Log.d("888",""+dry);
+        SQLiteDatabase database;
+        String name = "wine_list.db";
+        database = openOrCreateDatabase("/mnt/sdcard/" + name, MODE_PRIVATE, null);
 
-        textview3 = (TextView)findViewById(R.id.textView3);
-
-        textview3.setText(""+wine+dry+light);
     }
 
 
