@@ -12,4 +12,37 @@
         android:layout_marginBottom="73dp"
         android:onClick="onBackButtonClicked" />
 
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:id="@+id/editText1"
+        android:hint="술 이름을 입력하세요."
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp">
+        <requestFocus/>
+    </EditText>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:id="@+id/editText2"
+        android:hint="술 맛을 입력하세요."
+        android:layout_below="@+id/editText1"
+        android:layout_alignStart="@+id/editText1"
+        android:layout_marginTop="30dp">
+    <requestFocus/>
+</EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:id="@+id/button7"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_marginTop="30dp"
+        android:layout_alignEnd="@+id/editText2"
+        android:onClick="onButton7Clicked"/>
 </RelativeLayout>

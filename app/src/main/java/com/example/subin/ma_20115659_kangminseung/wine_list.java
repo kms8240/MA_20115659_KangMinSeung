@@ -1,13 +1,14 @@
 package com.example.subin.ma_20115659_kangminseung;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,17 +23,25 @@ public class wine_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wine_list);
 
-        listView = (ListView)this.findViewById(R.id.listView);
+        listView = (ListView) this.findViewById(R.id.listView);
+        SQLiteDatabase database;
+        String wine_list_db = "wine_list.db";
+        database = openOrCreateDatabase(wine_list_db, MODE_PRIVATE, null);
 
         ArrayList<String> items = new ArrayList<>();
-        items.add("  Save");
-        items.add("  List");
-        items.add("  Back");
 
-        CustomAdapter adapter = new CustomAdapter(this, 0, items);
-        listView.setAdapter(adapter);
+        Cursor c1 = database.rawQuery("select * from customer_wine_list", null);
+
+        while (c1.moveToNext()) {
+
+            String str = "";
+            str += "이름 : " + c1.getString(0) + "\n맛 : " + c1.getString(1);
+
+            items.add(str);
+            CustomAdapter adapter = new CustomAdapter(this, 0, items);
+            listView.setAdapter(adapter);
+        }
     }
-
     private class CustomAdapter extends ArrayAdapter<String>{
         private ArrayList<String> items;
 
@@ -47,11 +56,6 @@ public class wine_list extends AppCompatActivity {
                 LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 v = vi.inflate(R.layout.listview_item, null);
             }
-
-            ImageView imageView = (ImageView)v.findViewById(R.id.imageView);
-
-            if("  Save".equals(items.get(position)))
-                imageView.setImageResource(R.drawable.save);
 
             TextView textView = (TextView)v.findViewById(R.id.textView);
 

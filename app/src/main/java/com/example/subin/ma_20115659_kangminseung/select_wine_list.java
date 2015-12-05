@@ -82,7 +82,7 @@ public class select_wine_list extends AppCompatActivity {
                     "'붉은 과일의 풍미가 스파이시함으로 중화되었다가, 유혹적인 오크의 향미로 인해 부드러운 피니시감으로 마무리됨','f');");
 
             database.execSQL("insert into wine_list (wine, dry, light, name, color, smell, taste, separator) values " +
-                    "(0,0,1,'샤또 트리아농','석류 빛이 도는 짙은 루비색','신선한 레드 베리의 향이 느껴지며 시간이 지남에 따라 더 짙고 농익은 과일 향으로 발전함. 후반부에 느껴지는 스파이시한 아로마와 박하 향이 복합 미를 더해 줌'," +
+                    "(0,1,0,'샤또 트리아농','석류 빛이 도는 짙은 루비색','신선한 레드 베리의 향이 느껴지며 시간이 지남에 따라 더 짙고 농익은 과일 향으로 발전함. 후반부에 느껴지는 스파이시한 아로마와 박하 향이 복합 미를 더해 줌'," +
                     "'가벼준 타닌감과 부드럽고 풍부한 과일 풍미가 잘 어리어짐. 단단한 느낌의 구조 감에 스파이시향이 어우러짐','g');");
 
             database.execSQL("insert into wine_list (wine, dry, light, name, color, smell, taste, separator) values " +
@@ -130,7 +130,7 @@ public class select_wine_list extends AppCompatActivity {
                     "'입안 가득 느껴지는 엘레강스한 느낌의 긴 여운이 훌륭한 와인','r');");
 
             database.execSQL("insert into wine_list (wine, dry, light, name, color, smell, taste, separator) values " +
-                    "(0,0,1,'샤를로팽 부르고뉴 피노 누아','깊고 강렬한 루비색','체리 등의 붉은 과일의 아로마'," +
+                    "(0,0,0,'샤를로팽 부르고뉴 피노 누아','깊고 강렬한 루비색','체리 등의 붉은 과일의 아로마'," +
                     "'붉은 과일의 풍미가 실키한 나무 향과 균형 있게 어우러지며 긴 여운이 느껴짐','s');");
 
             database.execSQL("insert into wine_list (wine, dry, light, name, color, smell, taste, separator) values " +
@@ -150,7 +150,7 @@ public class select_wine_list extends AppCompatActivity {
                     "'풍성한 과일 향이 입안을 가득 채우며 향신료 느낌의 끝 맛이 특징임. 뛰어난 구조감을 바탕으로 오래 지속되는 피니시와 잘 다듬어진 균형 잡힌 맛의 와인. 바닷가재와 같은 갑각류의 요리. 해산물 샐러드와 잘 어울림','w');");
 
             database.execSQL("insert into wine_list (wine, dry, light, name, color, smell, taste, separator) values " +
-                    "(0,0,2,'리모레스끄 크뤼 클라쎄 루즈','진한 붉은 자주색','잘 익은 과일과 향신료 그리고 지중해 지역의 석회질토양의 미네랄 향과 뒤로 갈수록 점점 더 풍성한 과일 향 나타남'," +
+                    "(0,1,1,'리모레스끄 크뤼 클라쎄 루즈','진한 붉은 자주색','잘 익은 과일과 향신료 그리고 지중해 지역의 석회질토양의 미네랄 향과 뒤로 갈수록 점점 더 풍성한 과일 향 나타남'," +
                     "'부드럽고 균형이 잘 잡혀 있는 와인이며 잘 익은 과일의 맛과 입안에서 오래 지속되는 피니시가 인상적인 와인임. 붉은 육류나 바비큐, 그릴 요리와 함께 하면 좋은 와인임.','x');");
 
             database.execSQL("insert into wine_list (wine, dry, light, name, color, smell, taste, separator) values " +

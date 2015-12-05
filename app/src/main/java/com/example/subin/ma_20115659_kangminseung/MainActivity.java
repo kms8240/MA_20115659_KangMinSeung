@@ -1,6 +1,7 @@
 package com.example.subin.ma_20115659_kangminseung;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -17,9 +18,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SQLiteDatabase database;
+        String wine_list_db = "wine_list.db";
+        database = openOrCreateDatabase(wine_list_db, MODE_PRIVATE, null);
 
-
-
+        database.execSQL("create table if not exists customer_wine_list" + "("
+                + "name text,"
+                + "taste text);");
     }
 
     public void onButton1Clicked(View v){

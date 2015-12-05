@@ -16,7 +16,8 @@ public class wine_cellar extends AppCompatActivity {
     }
 
     public void onSaveButtonClicked(View v){
-
+        Intent intent = new Intent(getApplicationContext(), wine_save.class);
+        startActivity(intent);
     }
 
     public void onListButtonClicked(View v){
