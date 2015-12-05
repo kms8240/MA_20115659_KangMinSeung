@@ -25,13 +25,22 @@ public class MainActivity extends AppCompatActivity {
     public void onButton1Clicked(View v){
         wine = 0;
         Intent intent = new Intent(getApplicationContext(), select_wine.class);
-        intent.putExtra("wine",wine);
+        intent.putExtra("wine", wine);
         startActivity(intent);
-        Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_LONG).show();
     }
 
     public void onButton2Clicked(View v){
-        Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
+        wine = 1;
+        Intent intent = new Intent(getApplicationContext(), select_wine.class);
+        intent.putExtra("wine",wine);
+        startActivity(intent);
+    }
+
+    public void onButton6Clicked(View v){
+        wine = 2;
+        Intent intent = new Intent(getApplicationContext(), select_wine_list.class);
+        intent.putExtra("wine",wine);
+        startActivity(intent);
     }
 
 
