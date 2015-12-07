@@ -3,7 +3,8 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#e5fffb">
 
     <ImageButton
         android:layout_width="150dp"
@@ -12,7 +13,7 @@
         android:onClick="onButton1Clicked"
         android:src = "@drawable/red_wine"
         android:background = "@null"
-        android:layout_above="@+id/button4"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
     <ImageButton
@@ -35,22 +36,24 @@
         android:layout_below="@+id/button4"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="all"
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:id="@+id/button6"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onButton6Clicked"/>
+        android:onClick="onButton6Clicked"
+        android:src="@drawable/all_button"
+        android:background="@null"
+        android:layout_above="@+id/button4"
+        android:layout_alignStart="@+id/button4" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="wine search"
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:id="@+id/button4"
-        android:layout_below="@+id/button6"
-        android:layout_centerHorizontal="true"
-        android:onClick="onButton4Clicked"/>
+        android:onClick="onButton4Clicked"
+        android:src="@drawable/wine_search_button"
+        android:background="@null"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

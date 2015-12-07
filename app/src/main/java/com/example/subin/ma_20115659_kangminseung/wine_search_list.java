@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,6 +29,9 @@ public class wine_search_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wine_search_list);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xFF00BFFF));
+
         Intent intent = getIntent();
         wine_name = intent.getExtras().getString("wine_name");
 
@@ -44,8 +49,7 @@ public class wine_search_list extends AppCompatActivity {
 
             Log.d("44", wine_name);
 
-
-            if(wine_name.equals(c1.getString(3))) {
+            if((c1.getString(3)).contains(wine_name)) {
                 String str = "";
                 str += "이름 : " + c1.getString(3) + "\n색 : " + c1.getString(4) + "\n향 : " + c1.getString(5) + "\n맛 : " + c1.getString(6);
 

@@ -1,7 +1,9 @@
 package com.example.subin.ma_20115659_kangminseung;
 
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +27,8 @@ public class wine_save extends AppCompatActivity {
         edittext2 = (EditText)findViewById(R.id.editText2);
         button = (Button)findViewById(R.id.button7);
 
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xFF00BFFF));
     }
 
     public void onButton7Clicked(View v){

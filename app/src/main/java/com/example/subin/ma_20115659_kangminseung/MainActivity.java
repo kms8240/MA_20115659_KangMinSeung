@@ -2,7 +2,9 @@ package com.example.subin.ma_20115659_kangminseung;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         database.execSQL("create table if not exists customer_wine_list" + "("
                 + "name text,"
                 + "taste text);");
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xFF00BFFF));
     }
 
     public void onButton1Clicked(View v){

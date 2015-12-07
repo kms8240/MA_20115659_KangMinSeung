@@ -1,7 +1,9 @@
 package com.example.subin.ma_20115659_kangminseung;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -39,6 +41,9 @@ public class select_wine extends AppCompatActivity implements AdapterView.OnItem
         spinner2.setAdapter(adapter2);
         spinner2.setSelection(1);
         spinner2.setOnItemSelectedListener(this);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xFF00BFFF));
 
     }
 
