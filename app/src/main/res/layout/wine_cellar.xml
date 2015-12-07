@@ -3,23 +3,24 @@
     android:layout_height="match_parent" >
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="save"
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:id="@+id/save_button"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="93dp"
-        android:onClick="onSaveButtonClicked"/>
+        android:onClick="onSaveButtonClicked"
+        android:src="@drawable/save_button"
+        android:background="@null"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="list"
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:id="@+id/list_button"
-        android:layout_below="@+id/save_button"
+        android:onClick="onListButtonClicked"
+        android:src="@drawable/list_button"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp"
-        android:onClick="onListButtonClicked"/>
+        android:layout_marginBottom="148dp" />
 </RelativeLayout>

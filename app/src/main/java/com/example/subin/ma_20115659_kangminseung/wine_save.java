@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,7 +14,7 @@ public class wine_save extends AppCompatActivity {
     EditText edittext1;
     EditText edittext2;
 
-    Button button;
+    //Button button;
 
 
     @Override
@@ -25,7 +24,7 @@ public class wine_save extends AppCompatActivity {
 
         edittext1 = (EditText)findViewById(R.id.editText1);
         edittext2 = (EditText)findViewById(R.id.editText2);
-        button = (Button)findViewById(R.id.button7);
+        //button = (Button)findViewById(R.id.button7);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(0xFF00BFFF));

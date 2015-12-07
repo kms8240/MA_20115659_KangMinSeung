@@ -2,15 +2,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:id="@+id/button3"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="73dp"
-        android:onClick="onBackButtonClicked" />
+        android:onClick="onBackButtonClicked"
+        android:src="@drawable/back_button"
+        android:background="@null"
+        android:layout_below="@+id/search_button"
+        android:layout_alignStart="@+id/search_button" />
 
     <EditText
         android:layout_width="300dp"
@@ -23,13 +23,13 @@
         <requestFocus/>
     </EditText>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="search"
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:id="@+id/search_button"
         android:onClick="onSearchButtonClicked"
+        android:src="@drawable/search_button"
+        android:background="@null"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/search_text"
-        android:layout_alignEnd="@+id/search_text" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

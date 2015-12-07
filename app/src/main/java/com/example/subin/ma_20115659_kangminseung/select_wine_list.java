@@ -24,7 +24,6 @@ public class select_wine_list extends AppCompatActivity {
     int light;
     int wine;
     ListView listView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -227,6 +226,8 @@ public class select_wine_list extends AppCompatActivity {
 
 
             TextView textView = (TextView)v.findViewById(R.id.text_name);
+
+           // textView.setTypeface(typeFace);
             textView.setText(items.get(position));
 
             if("a".equals(items2.get(position)))
