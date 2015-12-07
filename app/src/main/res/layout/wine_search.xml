@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="73dp"
+        android:onClick="onBackButtonClicked" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:id="@+id/search_text"
+        android:hint="술 이름을 입력하세요."
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp">
+        <requestFocus/>
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="search"
+        android:id="@+id/search_button"
+        android:onClick="onSearchButtonClicked"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/search_text"
+        android:layout_alignEnd="@+id/search_text" />
+</RelativeLayout>

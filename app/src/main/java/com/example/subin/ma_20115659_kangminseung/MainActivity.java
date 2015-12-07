@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,7 +51,11 @@ public class MainActivity extends AppCompatActivity {
     public void onButton3Clicked(View v){
         Intent intent = new Intent(getApplicationContext(), wine_cellar.class);
         startActivity(intent);
-        Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
+    }
+
+    public void onButton4Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), wine_search.class);
+        startActivity(intent);
     }
 
 
