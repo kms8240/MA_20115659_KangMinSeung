@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         database.execSQL("create table if not exists customer_wine_list" + "("
                 + "name text,"
-                + "taste text);");
+                + "taste text,"
+                + "separator text);");
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(0xFF00BFFF));

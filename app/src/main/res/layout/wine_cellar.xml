@@ -10,8 +10,9 @@
         android:onClick="onSaveButtonClicked"
         android:src="@drawable/save_button"
         android:background="@null"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/list_button"
+        android:layout_marginTop="45dp" />
 
     <ImageButton
         android:layout_width="150dp"
@@ -20,7 +21,17 @@
         android:onClick="onListButtonClicked"
         android:src="@drawable/list_button"
         android:background="@null"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/save_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="148dp" />
+        android:layout_marginTop="45dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/wine_cellar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
 </RelativeLayout>

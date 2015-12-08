@@ -39,8 +39,8 @@ public class wine_save extends AppCompatActivity {
         String wine_list_db = "wine_list.db";
         database = openOrCreateDatabase(wine_list_db, MODE_PRIVATE, null);
 
-        database.execSQL("insert into customer_wine_list (name, taste) values " +
-                "('" + inPutText1 +"','"+ inPutText2 + "');");
+        database.execSQL("insert into customer_wine_list (name, taste, separator) values " +
+                "('" + inPutText1 +"','"+ inPutText2 + "','kms' );");
         Toast.makeText(getApplicationContext(), "저장되었습니다.", Toast.LENGTH_LONG).show();
     }
 

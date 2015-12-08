@@ -14,7 +14,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -167,6 +169,8 @@ public class select_wine_list extends AppCompatActivity {
 
         ArrayList<String> items = new ArrayList<>();
         ArrayList<String> items2 = new ArrayList<>();
+        ArrayList<String> items3 = new ArrayList<>();
+        ArrayList<String> items4 = new ArrayList<>();
 
         c1 = database.rawQuery("select * from wine_list", null);
 
@@ -182,6 +186,16 @@ public class select_wine_list extends AppCompatActivity {
                 str += c1.getString(7);
 
                 items2.add(str);
+
+                str = "";
+                str += c1.getString(3);
+
+                items3.add(str);
+
+                str = "";
+                str += c1.getString(6);
+
+                items4.add(str);
             }
             else if(wine == c1.getInt(0) && dry == c1.getInt(1) && light == c1.getInt(2)) {
 
@@ -194,25 +208,42 @@ public class select_wine_list extends AppCompatActivity {
                 str += c1.getString(7);
 
                 items2.add(str);
+
+                str = "";
+                str += c1.getString(3);
+
+                items3.add(str);
+
+                str = "";
+                str += c1.getString(6);
+
+                items4.add(str);
             }
 
         }
 
         c1.close();
 
-        CustomAdapter adapter = new CustomAdapter(this, 0, items, items2);
+        CustomAdapter adapter = new CustomAdapter(this, 0, items, items2, items3, items4);
         listView.setAdapter(adapter);
 
+    }
+    private void makeToast(String name) {
+        Toast.makeText(this, "저장되었습니다.", Toast.LENGTH_SHORT).show();
     }
 
     private class CustomAdapter extends ArrayAdapter<String> {
         private ArrayList<String> items;
         private ArrayList<String> items2;
+        private ArrayList<String> items3;
+        private ArrayList<String> items4;
 
-        public CustomAdapter(Context context, int textViewResourceId, ArrayList<String> objects, ArrayList<String> objects2){
+        public CustomAdapter(Context context, int textViewResourceId, ArrayList<String> objects, ArrayList<String> objects2,ArrayList<String> objects3,ArrayList<String> objects4){
             super(context, textViewResourceId, objects);
             this.items = objects;
             this.items2 = objects2;
+            this.items3 = objects3;
+            this.items4 = objects4;
         }
 
         public View getView(int position, View convertView, ViewGroup patent){
@@ -223,12 +254,10 @@ public class select_wine_list extends AppCompatActivity {
             }
 
             ImageView imageView = (ImageView)v.findViewById(R.id.imageView2);
-
-
             TextView textView = (TextView)v.findViewById(R.id.text_name);
 
-           // textView.setTypeface(typeFace);
             textView.setText(items.get(position));
+
 
             if("a".equals(items2.get(position)))
                 imageView.setImageResource(R.drawable.a);
@@ -305,6 +334,24 @@ public class select_wine_list extends AppCompatActivity {
             if("y".equals(items2.get(position)))
                 imageView.setImageResource(R.drawable.y);
 
+            final String text1 = items3.get(position);
+            final String text2 = items4.get(position);
+            final String text3 = items2.get(position);
+            RadioButton button = (RadioButton)v.findViewById(R.id.radioButton);
+            button.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+
+                    SQLiteDatabase database;
+                    String wine_list_db = "wine_list.db";
+                    database = openOrCreateDatabase(wine_list_db, MODE_PRIVATE, null);
+
+                    database.execSQL("insert into customer_wine_list (name, taste, separator) values " +
+                            "('" + text1 +"','"+ text2 + "','" +text3 +"');");
+
+                    makeToast(text1);
+                }
+            });
             return v;
         }
     }

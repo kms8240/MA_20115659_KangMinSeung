@@ -24,6 +24,8 @@
         <activity android:name="select_wine_list"></activity>
         <activity android:name="wine_search"></activity>
         <activity android:name="wine_search_list"></activity>
-    </application>
 
+
+    </application>
 </manifest>
+
