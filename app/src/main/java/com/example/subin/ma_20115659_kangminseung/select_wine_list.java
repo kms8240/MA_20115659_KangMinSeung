@@ -76,6 +76,10 @@ public class select_wine_list extends AppCompatActivity {
                     "'입안 가득 느껴지는 풍부한 풍미와 완벽한 바디감을 느낄 수 있음','c');");
 
             database.execSQL("insert into wine_list (wine, dry, light, name, color, smell, taste, separator) values " +
+                    "(0,0,0,'아나케나 멜롯','아름다운 루비 색','부드러운 과일 향'," +
+                    "'입안가득 느껴지는 달콤한 과일향이 끝까지 지속되며 붉은육류, 생선류와 잘 어울림','z');");
+
+            database.execSQL("insert into wine_list (wine, dry, light, name, color, smell, taste, separator) values " +
                     "(0,0,2,'샤또 마스까르','짙은 루비 색','레드베리와 라즈베리 풍미와 진한 오크향을 느낄수 있음'," +
                     "'뛰어난 구조감. 벨벳과 같은 부드러운 여운과 피니시가 느껴짐','d');");
 
@@ -333,6 +337,9 @@ public class select_wine_list extends AppCompatActivity {
 
             if("y".equals(items2.get(position)))
                 imageView.setImageResource(R.drawable.y);
+
+            if("z".equals(items2.get(position)))
+                imageView.setImageResource(R.drawable.z);
 
             final String text1 = items3.get(position);
             final String text2 = items4.get(position);
