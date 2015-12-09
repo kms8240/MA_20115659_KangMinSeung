@@ -10,9 +10,9 @@
         android:onClick="onBackButtonClicked"
         android:src="@drawable/back_button"
         android:background="@null"
-        android:layout_below="@+id/button7"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/button7"
-        android:layout_marginTop="20dp" />
+        android:layout_marginBottom="20dp" />
 
     <EditText
         android:layout_width="300dp"
@@ -33,7 +33,6 @@
         android:layout_below="@+id/editText1"
         android:layout_alignStart="@+id/editText1"
         android:layout_marginTop="40dp">
-    <requestFocus/>
 </EditText>
 
     <ImageButton
@@ -43,7 +42,7 @@
         android:onClick="onButton7Clicked"
         android:src="@drawable/save_button"
         android:background="@null"
-        android:layout_below="@+id/editText2"
+        android:layout_above="@+id/button3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:layout_marginBottom="20dp" />
 </RelativeLayout>

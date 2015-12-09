@@ -74,10 +74,11 @@ public class wine_search_list extends AppCompatActivity {
 
                 items4.add(str);
 
-                CustomAdapter adapter = new CustomAdapter(this, 0, items, items2, items3, items4);
-                listView.setAdapter(adapter);
+
             }
         }
+        CustomAdapter adapter = new CustomAdapter(this, 0, items, items2, items3, items4);
+        listView.setAdapter(adapter);
     }
 
     private void makeToast(String name) {
