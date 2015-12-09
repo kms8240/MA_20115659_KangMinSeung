@@ -154,6 +154,9 @@ public class wine_list extends AppCompatActivity {
             if("y".equals(items2.get(position)))
                 imageView.setImageResource(R.drawable.y);
 
+            if("kms".equals(items2.get(position)))
+                imageView.setImageResource(R.drawable.wine);
+
 
             return v;
         }
