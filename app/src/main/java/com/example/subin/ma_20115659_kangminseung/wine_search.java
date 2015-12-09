@@ -36,7 +36,6 @@ public class wine_search extends AppCompatActivity {
     }
 
     public void onBackButtonClicked(View v){
-        Toast.makeText(getApplicationContext(),"back",Toast.LENGTH_LONG).show();
         finish();
     }
 }

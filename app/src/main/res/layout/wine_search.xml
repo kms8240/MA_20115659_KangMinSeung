@@ -1,16 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#fdfdfdfd">
 
     <ImageButton
-        android:layout_width="150dp"
+        android:layout_width="250dp"
         android:layout_height="60dp"
         android:id="@+id/button3"
         android:onClick="onBackButtonClicked"
         android:src="@drawable/back_button"
         android:background="@null"
         android:layout_below="@+id/search_button"
-        android:layout_alignStart="@+id/search_button" />
+        android:layout_alignStart="@+id/search_button"
+        android:layout_marginTop="60dp" />
 
     <EditText
         android:layout_width="300dp"
@@ -24,11 +26,11 @@
     </EditText>
 
     <ImageButton
-        android:layout_width="150dp"
+        android:layout_width="250dp"
         android:layout_height="60dp"
         android:id="@+id/search_button"
         android:onClick="onSearchButtonClicked"
-        android:src="@drawable/search_button"
+        android:src="@drawable/s_button"
         android:background="@null"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />

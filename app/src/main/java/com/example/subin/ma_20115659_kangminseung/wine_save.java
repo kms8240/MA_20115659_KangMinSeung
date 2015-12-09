@@ -45,7 +45,6 @@ public class wine_save extends AppCompatActivity {
     }
 
     public void onBackButtonClicked(View v){
-        Toast.makeText(getApplicationContext(),"back",Toast.LENGTH_LONG).show();
         finish();
     }
 }

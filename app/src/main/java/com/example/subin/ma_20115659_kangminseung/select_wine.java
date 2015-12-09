@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,6 +23,9 @@ public class select_wine extends AppCompatActivity implements AdapterView.OnItem
     int result2;
 
     int wine;
+    Intent intent;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,15 @@ public class select_wine extends AppCompatActivity implements AdapterView.OnItem
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(0xFF00BFFF));
+
+        intent = getIntent();
+
+        wine = intent.getExtras().getInt("wine");
+        if(wine == 1)
+        {
+            ImageView imageView = (ImageView)findViewById(R.id.imageView4);
+            imageView.setImageResource(R.drawable.white_wine);
+        }
 
     }
 
@@ -69,15 +82,11 @@ public class select_wine extends AppCompatActivity implements AdapterView.OnItem
     }
 
     public void onBackButtonClicked(View v){
-        Toast.makeText(getApplicationContext(),"back",Toast.LENGTH_LONG).show();
         finish();
     }
 
 
     public void onNextButtonClicked(View v){
-        Log.d("버튼안",""+result);
-        Intent intent = getIntent();
-
         wine = intent.getExtras().getInt("wine");
 
         intent = new Intent(select_wine.this, select_wine_list.class);
